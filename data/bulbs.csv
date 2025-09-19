@@ -1,0 +1,6 @@
+# key,value
+# key format: <BRAND>-BULB-<MODEL>
+BrandA-BULB-100,9
+BrandA-BULB-SoftLite,7
+BrandB-BULB-100,10
+BrandB-BULB-Ultra,12

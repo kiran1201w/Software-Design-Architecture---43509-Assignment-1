@@ -1,0 +1,6 @@
+# key,value
+# key format: <BRAND>-LOCK-<MODEL>
+BrandA-LOCK-Slim,25
+BrandA-LOCK-Max,30
+BrandB-LOCK-Secure-Pro,35
+BrandB-LOCK-Lite,20
