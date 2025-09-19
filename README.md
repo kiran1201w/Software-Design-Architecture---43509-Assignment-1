@@ -2,39 +2,15 @@
 
 This repo implements the **Abstract Factory** pattern to create smart-home devices (Bulb, Lock) for multiple brands, and uses the **Factory Method** pattern to set device usage values **after** object creation by reading them from simple CSV “database” files.
 
-> Matches the assignment’s scenario and deliverables (UML, Java implementation, test driver, README).
 
-## Repo Structure
-
-```
-.
-├── data/
-│   ├── bulbs.csv        # Simulated DB: power (W) per bulb
-│   └── locks.csv        # Simulated DB: battery usage (mAh/day) per lock
-├── src/
-│   ├── main/java/com/example/smarthome/
-│   │   ├── AbstractSmartDevice.java
-│   │   ├── BrandASmartDeviceFactory.java
-│   │   ├── BrandBSmartDeviceFactory.java
-│   │   ├── Bulb.java
-│   │   ├── DeviceDataLoader.java
-│   │   ├── Lock.java
-│   │   ├── Main.java
-│   │   ├── SmartDevice.java
-│   │   └── UsageRecord.java
-│   └── test/java/com/example/smarthome/
-│       └── SmartHomeTest.java
-└── pom.xml
-```
 
 ## How the Patterns Are Used
 
 - **Abstract Factory** (`SmartDeviceFactory`, `BrandASmartDeviceFactory`, `BrandBSmartDeviceFactory`): creates **families** of related products (Bulb, Lock) without tying client code to concrete classes.
 - **Factory Method** (`AbstractSmartDevice#createUsageRecord`): after a `Bulb`/`Lock` is created by the factory, the device calls `configureUsage(...)`. That method delegates to the **factory method** `createUsageRecord(...)` implemented by concrete products to load and interpret the proper CSV and set the usage value.
 
-## UML (Mermaid)
+## UML 
 
-> GitHub renders Mermaid diagrams directly.
 
 ```mermaid
 classDiagram
@@ -107,9 +83,7 @@ classDiagram
 
 ## Steps to Build & Run this asigmnet
 
-### Prereqs
-- Java 17+
-- Maven 3.9+
+
 
 ### Compile & Test
 ```bash
@@ -143,7 +117,7 @@ Lock BrandB Secure-Pro - battery=35mAh/day
 
 ---
 
-### References (from assignment brief)
+### References 
 
 - Factory Method pattern — Wikipedia  
 - Abstract Factory pattern — Wikipedia
